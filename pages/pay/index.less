@@ -1,0 +1,138 @@
+page{
+    padding-bottom: 90rpx;
+}
+.revice_address{
+   
+    .user_address_info{
+        display: flex;
+        font-size: 28rpx;
+        padding: 20rpx;
+        border-bottom: 1px solid #dedede;
+       .user_info{
+           flex: 5;
+       }
+       .user_iphone{
+           flex: 3;
+           text-align: right;
+       }
+    }
+}
+
+
+
+
+.cart_content {
+  .cart_title {
+      padding: 20rpx;
+    font-size: 36rpx;
+    color: var(--themeColor);
+    border-bottom: 1px solid #dedede;
+  }
+
+ .cart_main {
+    
+   .cart_item {
+        display: flex;
+        border-bottom: 1px solid #dedede;
+        padding: 15rpx;
+   
+.cart_image {
+    flex: 2;
+         display: flex;
+          justify-content: center;
+          align-items: center;
+    image{
+        width: 200rpx;
+        }
+      }
+
+     .cart_goods_info {
+         flex: 4;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+     .cart_goods_content {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: #666;
+        }
+
+       .cart_price_item {
+           display: flex;
+           justify-content: space-between;
+         .cart_price {
+            color: var(--themeColor);
+            font-size: 34rpx;
+          }
+
+        .cart_num_tool {
+            display: flex;
+           
+    
+           .cart_num {
+            width: 50rpx;
+            height: 50rpx;
+          
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.cart_buttom_tool {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    border-top: 1px solid #ccc;
+    .buttom_checkBox {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      checkbox-group {
+        checkbox {
+  
+        }
+      }
+    }
+  
+  .buttom_totalPrice {
+      flex: 5;
+      text-align: right;
+     padding:0 15rpx;
+      .buttom_price_content {
+       
+        .buttom_price {
+            color: var(--themeColor);
+            font-size: 34rpx;
+            font-weight: 600;
+        }
+      }
+  
+     .buttom_otherPrice {
+            font-size: 26rpx;
+      }
+    }
+  
+   .buttom_num {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--themeColor);
+        color: #fff;
+        font-size: 32rpx;
+        font-weight: 600;
+    }
+  }

@@ -1,0 +1,22 @@
+<Tabs tabs="{{tabs}}" bindchangeTabsIndex="handleTabsIndex">
+    <view class="collect_main">
+        <view class="collect_title">
+            <text class="collect_item active">全部</text>
+            <text class="collect_item">正在热卖</text>
+            <text class="collect_item">即将上线</text>
+        </view>
+        <view class="collect_content">
+            <navigator class="goods_item" wx:for="{{collectData}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <!-- 左边图片 -->
+                <view class="goods_image">
+                    <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" />
+                </view>
+                <!-- 右侧内容 -->
+                <view class="goods_info">
+                    <view class="goods_Content">{{item.goods_name}}</view>
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</Tabs>

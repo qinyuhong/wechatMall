@@ -1,0 +1,66 @@
+<view class="yg_index">
+  <!-- 搜索框开始 -->
+  <SearchInput></SearchInput>
+  <!-- 搜索框结束 -->
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+    <swiper autoplay="true" indicator-dots="true" circular="true">
+      <swiper-item wx:for="{{newSwipeList}}" wx:key="goods_id">
+        <navigator url="/pages/goods_list/index?cid=188">
+          <image mode="widthFix" src="{{item.image_src}}" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+  <!--分类导航开始-->
+  <view class="index_category">
+    <navigator url="/pages/category/index" open-type="switchTab" wx:for="{{categoryList}}" wx:key="name">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+  <!--分类导航结束-->
+  <!--楼层 开始-->
+  <view class="index_floor">
+    <view class="floor_grounp" wx:for="{{getFloorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="name">
+      <!--楼层标题-->
+      <view class="floor_title">
+        <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+      </view>
+      <!--楼层内容-->
+      <view class="floor_content">
+        <navigator url="/pages/category/index" open-type="switchTab" wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="index2">
+          <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!--楼层 结束-->
+
+  <!-- 推荐内容 -->
+  <view class="recommend-container">
+    <!-- 商品推荐头部 -->
+    <view class="recommend-hd">
+      <image mode="widthFix" src="https://img.alicdn.com/tfs/TB1V2eQrKSSBuNjy0FlXXbBpVXa-966-114.png"></image>
+    </view>
+
+    <!-- 推荐内容 -->
+    <view class="recommend-content">
+      <view wx:for="{{recommendList}}" wx:key="*this" class="recommend-item">
+        <navigator open-type="navigate">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+        <view class="recommend-info">
+          <span>{{item.title}}</span>
+        </view>
+        <view class="recommend-price">
+          <span>￥</span>
+          <span>{{item.price}}</span>
+        </view>
+      </view>
+
+
+    </view>
+    <!-- 推荐内容结束 -->
+  </view>
+</view>

@@ -1,0 +1,52 @@
+/* pages/category/index.wxss */
+page {
+  height: 100%;
+}
+.cates {
+  height: 100%;
+}
+.cates .cates_container {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.cates .cates_container .cates_leftScrollMenu {
+  flex: 2;
+}
+.cates .cates_container .cates_leftScrollMenu .leftMenuItem {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #cccccc;
+  font-size: 28rpx;
+}
+.cates .cates_container .cates_leftScrollMenu .active {
+  color: var(--themeColor);
+}
+.cates .cates_container .cates_rightScrollMenu {
+  flex: 5;
+}
+.cates .cates_container .cates_rightScrollMenu .goods_group .goods_listTitle {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cates .cates_container .cates_rightScrollMenu .goods_group .goods_listTitle .theLimit {
+  padding: 0 10rpx;
+  color: #cccccc;
+}
+.cates .cates_container .cates_rightScrollMenu .goods_group .goods_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cates .cates_container .cates_rightScrollMenu .goods_group .goods_list navigator {
+  width: 33.33%;
+  text-align: center;
+}
+.cates .cates_container .cates_rightScrollMenu .goods_group .goods_list navigator image {
+  width: 50%;
+}
+.cates .cates_container .cates_rightScrollMenu .goods_group .goods_list navigator .image_goodsName {
+  font-size: 30rpx;
+}

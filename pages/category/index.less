@@ -1,0 +1,56 @@
+/* pages/category/index.wxss */
+page{
+    height: 100%;
+}
+.cates{
+    height: 100%;
+    .cates_container{
+        height: ~'calc(100vh - 90rpx)';
+        display: flex;
+        .cates_leftScrollMenu{
+            flex: 2;
+            .leftMenuItem{
+                height: 80rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1rpx solid #cccccc;
+                font-size: 28rpx;
+            }
+            .active{
+                color:var(--themeColor)
+            }
+        }
+        .cates_rightScrollMenu{
+            flex: 5;
+           .goods_group{
+            .goods_listTitle{
+                height: 80rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .theLimit{
+                    padding: 0 10rpx;
+                    color: #cccccc;
+                }
+               
+            }
+            .goods_list{
+                display: flex;
+                flex-wrap: wrap;
+                navigator{
+                    width: 33.33%;
+                    text-align: center;
+                    image{
+                        width: 50%;
+                    }
+                    .image_goodsName{
+                        font-size: 30rpx;
+                    }
+                }
+            }
+           }
+           
+        }
+    }
+}
